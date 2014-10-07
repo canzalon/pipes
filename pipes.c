@@ -8,21 +8,21 @@
 //
 // Description: 
 //
-//		The pipes program replicates the behavior of the pipes 
-//		command (|) in a unix shell. This command takes the output 
-//		of one process, and makes it the input for another. To 
-//		achieve this, this C program creates a pipe using the 
-//		pipe() function. It then creates two child processes using 
-//		fork(). The fork operation is one that creates a copy of 
-//		the parent process, creating a child process. It is a 
-//		system call in the kernel that is used for process creation 
-//		in Unix systems. Child 1 redirects its output from stdout 
-//		to the write end of the pipe and executes the command 
-//		"ls -al" using the execlp() function. Child 2 redirects its 
-//		input from stdin to the read end of the pipe and executes 
-//		the "sort -n -k 5" command. The parent process waits for 
-//		its children processes to finish executing before it 
-//		terminates.
+//	The pipes program replicates the behavior of the pipes 
+//	command (|) in a unix shell. This command takes the output 
+//	of one process, and makes it the input for another. To 
+//	achieve this, this C program creates a pipe using the 
+//	pipe() function. It then creates two child processes using 
+//	fork(). The fork operation is one that creates a copy of 
+//	the parent process, creating a child process. It is a 
+//	system call in the kernel that is used for process creation 
+//	in Unix systems. Child 1 redirects its output from stdout 
+//	to the write end of the pipe and executes the command 
+//	"ls -al" using the execlp() function. Child 2 redirects its 
+//	input from stdin to the read end of the pipe and executes 
+//	the "sort -n -k 5" command. The parent process waits for 
+//	its children processes to finish executing before it 
+//	terminates.
 //
 // ////////////////////////////////////////////////////////////////
 
